@@ -29,24 +29,40 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.btnPush = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lblTitle
             // 
-            this.label1.Font = new System.Drawing.Font("a댄스퀸B", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(393, 71);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.lblTitle.Font = new System.Drawing.Font("a댄스퀸B", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblTitle.Location = new System.Drawing.Point(12, 9);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(393, 71);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "헬로 월드?!";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnPush
+            // 
+            this.btnPush.BackColor = System.Drawing.Color.Salmon;
+            this.btnPush.Font = new System.Drawing.Font("나눔바른펜", 39.74999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnPush.ForeColor = System.Drawing.Color.Yellow;
+            this.btnPush.Location = new System.Drawing.Point(12, 83);
+            this.btnPush.Name = "btnPush";
+            this.btnPush.Size = new System.Drawing.Size(393, 89);
+            this.btnPush.TabIndex = 1;
+            this.btnPush.Text = "눌러주세요~";
+            this.btnPush.UseVisualStyleBackColor = false;
+            this.btnPush.Click += new System.EventHandler(this.btnPush_Click);
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(417, 135);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(417, 187);
+            this.Controls.Add(this.btnPush);
+            this.Controls.Add(this.lblTitle);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -63,7 +79,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Button btnPush;
     }
 }
 
