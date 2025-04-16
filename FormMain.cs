@@ -29,15 +29,16 @@ namespace HelloWorldWinform
 
         private void 프로그램정보ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // 모달(Modal) 창            
             Form formAbout1 = new FormAbout();
-            Form formAbout2 = new FormAbout();
-            // 모달(Modal) 창
             formAbout1.Text = "모달창";
             formAbout1.ShowDialog();
 
             // 모달리스(Modeless) 창 
+            Form formAbout2 = new FormAbout();            
             formAbout2.Text = "모달리스창";
             formAbout2.Show();
+
         }
     }
 }

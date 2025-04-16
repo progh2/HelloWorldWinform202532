@@ -36,15 +36,20 @@
             this.끝내기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.도움말ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.프로그램정보ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitle
             // 
             this.lblTitle.Font = new System.Drawing.Font("a댄스퀸B", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblTitle.Location = new System.Drawing.Point(24, 44);
+            this.lblTitle.Location = new System.Drawing.Point(6, 49);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(393, 71);
+            this.lblTitle.Size = new System.Drawing.Size(392, 71);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "헬로 월드?!";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -54,9 +59,9 @@
             this.btnPush.BackColor = System.Drawing.Color.Salmon;
             this.btnPush.Font = new System.Drawing.Font("나눔바른펜", 39.74999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnPush.ForeColor = System.Drawing.Color.Yellow;
-            this.btnPush.Location = new System.Drawing.Point(24, 130);
+            this.btnPush.Location = new System.Drawing.Point(6, 149);
             this.btnPush.Name = "btnPush";
-            this.btnPush.Size = new System.Drawing.Size(393, 89);
+            this.btnPush.Size = new System.Drawing.Size(395, 195);
             this.btnPush.TabIndex = 1;
             this.btnPush.Text = "눌러주세요~";
             this.btnPush.UseVisualStyleBackColor = false;
@@ -69,7 +74,7 @@
             this.도움말ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(434, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(968, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -84,7 +89,7 @@
             // 끝내기ToolStripMenuItem
             // 
             this.끝내기ToolStripMenuItem.Name = "끝내기ToolStripMenuItem";
-            this.끝내기ToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.끝내기ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.끝내기ToolStripMenuItem.Text = "끝내기";
             this.끝내기ToolStripMenuItem.Click += new System.EventHandler(this.끝내기ToolStripMenuItem_Click);
             // 
@@ -103,14 +108,45 @@
             this.프로그램정보ToolStripMenuItem.Text = "프로그램 정보";
             this.프로그램정보ToolStripMenuItem.Click += new System.EventHandler(this.프로그램정보ToolStripMenuItem_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Font = new System.Drawing.Font("나눔스퀘어", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox1.Location = new System.Drawing.Point(12, 28);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(531, 350);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "메모장 실습";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnPush);
+            this.groupBox2.Controls.Add(this.lblTitle);
+            this.groupBox2.Font = new System.Drawing.Font("나눔스퀘어", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox2.Location = new System.Drawing.Point(549, 28);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(407, 350);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "헬로월드 실습";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(7, 31);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(518, 313);
+            this.textBox1.TabIndex = 0;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(434, 244);
-            this.Controls.Add(this.btnPush);
-            this.Controls.Add(this.lblTitle);
+            this.ClientSize = new System.Drawing.Size(968, 390);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.groupBox2);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -123,6 +159,9 @@
             this.Text = "3200 함기훈";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,6 +176,9 @@
         private System.Windows.Forms.ToolStripMenuItem 끝내기ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 도움말ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 프로그램정보ToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
