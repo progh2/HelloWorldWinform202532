@@ -64,5 +64,59 @@ namespace HelloWorldWinform
 
             }
         }
+
+        private void 새로만들기ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lblFileName.Text = "제목없음";
+            textBox1.Text = "글자를 입력해 주세요~";
+        }
+
+        private void 저장ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(lblFileName.Text == "제목없음")
+            {
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = "텍스트 문서(*.txt)|*.txt|csv 파일(*.csv)|*.csv|모든 파일(*.*)|*.*";
+                DialogResult result = saveFileDialog.ShowDialog();
+
+                switch (result)
+                {
+                    case DialogResult.Cancel:
+                        return;
+                        break;
+                    case DialogResult.OK:
+                        lblFileName.Text = saveFileDialog.FileName;
+                        break;
+                }
+            }
+            using (StreamWriter sw = new StreamWriter(lblFileName.Text))
+            {
+                sw.Write(textBox1.Text);
+                sw.Close();
+            }
+        }
+
+        private void 다른이름으로저장ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "텍스트 문서(*.txt)|*.txt|csv 파일(*.csv)|*.csv|모든 파일(*.*)|*.*";
+            saveFileDialog.FileName = lblFileName.Text;
+            DialogResult result = saveFileDialog.ShowDialog();
+
+            switch (result)
+            {
+                case DialogResult.Cancel:
+                    return;
+                    break;
+                case DialogResult.OK:
+                    lblFileName.Text = saveFileDialog.FileName;
+                    break;
+            }
+            using (StreamWriter sw = new StreamWriter(lblFileName.Text))
+            {
+                sw.Write(textBox1.Text);
+                sw.Close();
+            }
+        }
     }
 }
